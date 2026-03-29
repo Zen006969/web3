@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEN0 69 - Premium Gaming Optimization</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Orbitron', monospace;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 50%, #000 100%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Glassmorphism Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ff0040, #00d4ff, #ff6b00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255, 0, 64, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 10px #ff0040); }
+            to { filter: drop-shadow(0 0 20px #00d4ff); }
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="g" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ff0040" stop-opacity="0.1"/><stop offset="100%" stop-color="%2300d4ff" stop-opacity="0.05"/></radialGradient></defs><rect width="100%" height="100%" fill="url(%23g)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.1) rotate(180deg); }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            background: linear-gradient(45deg, #ff0040, #00d4ff, #ff6b00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            text-shadow: 0 0 40px rgba(255, 0, 64, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 100px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            background: linear-gradient(45deg, #ff0040, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 80px;
+            text-shadow: 0 0 30px rgba(255, 0, 64, 0.3);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .product-card {
+            padding: 40px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .product-card:hover::before {
+            left: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-20px) scale(1.02);
+            box-shadow: 0 40px 80px rgba(255, 0, 64, 0.3);
+        }
+
+        .product-title {
+            font-size: 2.2rem;
+            color: #fff;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .sensi-title {
+            background: linear-gradient(45deg, #ff0040, #ff6b00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .opti-title {
+            background: linear-gradient(45deg, #00d4ff, #0066ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .features {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+
+        .feature::before {
+            content: '⚡';
+            margin-right: 15px;
+            font-size: 1.3rem;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .price {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ff0040, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+        }
+
+        .buy-btn {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(45deg, #ff0040, #ff6b00);
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .buy-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 0, 64, 0.4);
+        }
+
+        .buy-btn.sensi {
+            background: linear-gradient(45deg, #ff0040, #ff6b00);
+        }
+
+        .buy-btn.opti {
+            background: linear-gradient(45deg, #00d4ff, #0066ff);
+        }
+
+        /* Custom Image Section */
+        .custom-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 80px;
+        }
+
+        .custom-image-card {
+            height: 250px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .custom-image-card:hover {
+            background: rgba(255, 0, 64, 0.2);
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            color: rgba(255, 255, 255, 0.6);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #ff0040, #00d4ff);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">ZEN0 69</div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>ZEN0 69</h1>
+        <p>🚀 Ultimate Gaming Optimization Suite | Perfect Sensitivity & Maximum FPS | Dominate Every Match</p>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <h2 class="section-title">PREMIUM PRODUCTS</h2>
+        
+        <div class="product-grid">
+            <!-- SENSI Product -->
+            <div class="glass product-card">
+                <h3 class="product-title sensi-title">🔥 SENSI BHAI</h3>
+                
+                <div class="features">
+                    <div class="feature">Best X and Y Settings</div>
+                    <div class="feature">Secret Emulator for Smoothness</div>
+                    <div class="feature">Best Tweaks for Abnormal Headshots</div>
+                    <div class="feature">Custom Resolution</div>
+                    <div class="feature">2X Scope & Jump Settings</div>
+                    <div class="feature">Best Regedits for Headshots</div>
+                    <div class="feature">Regedits for Mouse & Keyboard Smoothness</div>
+                    <div class="feature">Mouse 0 Delay</div>
+                    <div class="feature">Keyboard 0 Delay</div>
+                </div>
+                
+                <div class="price">₹499</div>
+                <a href="#" class="buy-btn sensi">BUY NOW 🔥</a>
+            </div>
+
+            <!-- OPTIMIZATION Product -->
+            <div class="glass product-card">
+                <h3 class="product-title opti-title">⚡ OPTIMIZATION BHAI</h3>
+                
+                <div class="features">
+                    <div class="feature">Optimize GPU with Hidden Settings & Regedits</div>
+                    <div class="feature">Our Own Optimizer</div>
+                    <div class="feature">Batch Files</div>
+                    <div class="feature">Emulator Settings for Max FPS</div>
+                    <div class="feature">Mouse 0 Delay</div>
+                    <div class="feature">Keyboard 0 Delay</div>
+                    <div class="feature">RAM Optimization</div>
+                    <div class="feature">CPU Optimization</div>
+                    <div class="feature">Hidden Softwares for Max FPS</div>
+                    <div class="feature">Best Power Plan</div>
+                    <div class="feature">Disable Unnecessary Services</div>
+                    <div class="feature">Regedits to Improve FPS</div>
+                </div>
+                
+                <div class="price">₹699</div>
+                <a href="#" class="buy-btn opti">BUY NOW ⚡</a>
+            </div>
+        </div>
+
+        <!-- Custom Images Section -->
+        <h2 class="section-title">YOUR IMAGES</h2>
+        <div class="custom-images">
+            <div class="glass custom-image-card">
+                ADD YOUR IMAGE 1 HERE
+                <br><small>(Replace with &lt;img src="your-image.jpg"&gt;)</small>
+            </div>
+            <div class="glass custom-image-card">
+                ADD YOUR IMAGE 2 HERE
+                <br><small>(Replace with &lt;img src="your-image.jpg"&gt;)</small>
+            </div>
+            <div class="glass custom-image-card">
+                ADD YOUR IMAGE 3 HERE
+                <br><small>(Replace with &lt;img src="your-image.jpg"&gt;)</small>
+            </div>
+            <div class="glass custom-image-card">
+                ADD YOUR IMAGE 4 HERE
+                <br><small>(Replace with &lt;img src="your-image.jpg"&gt;)</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ZEN0 69 - Premium Gaming Optimization. All Rights Reserved.</p>
+        <p>⚡ Dominate Every Match | Zero Delay | Max FPS ⚡</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for buy buttons
+        document.querySelectorAll('.buy-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('🔥 Coming Soon! Contact via WhatsApp/Discord 🔥');
+            });
+        });
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero');
+            parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+    </script>
+</body>
+</html>
